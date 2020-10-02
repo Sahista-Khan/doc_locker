@@ -1,0 +1,10 @@
+.docHeader{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    background: cadetblue;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+
+}

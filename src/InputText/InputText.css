@@ -1,0 +1,93 @@
+.main_Row{
+    display: flex;
+    justify-content: space-between;
+    margin-top:50px;
+
+    
+}
+
+.subunit_name{
+    display:flex;
+    flex-direction: column;
+    max-width:250px;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    height:100px;
+}
+
+.inputText{
+    height:30px;
+    width:100%;
+}
+
+.image{
+    width:65px
+
+}
+.imageLabel{
+    margin: auto;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main_Upload{
+    flex:0.85;
+    margin-right: 50px;
+}
+
+.main_second{
+    display:flex;
+    margin-top:50px;
+    justify-content: space-between;
+    margin-right: 26%;
+}
+
+.preDefined_tag{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    max-width:522px;
+    align-items: center;
+    justify-content: space-between;
+    height:100px;
+}
+
+.imagePreTag{
+    margin: auto;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around; 
+}
+.openTag{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 34%;
+}
+
+.openTag_Unit{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    max-width: 522px;
+    
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+.button{
+    margin-top: 40px;
+    width: 89px;
+    height: 40px;
+    background: cadetblue;
+    color: white;
+}
+
+.button:hover{
+    background: cornflowerblue;
+}

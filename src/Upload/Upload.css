@@ -1,0 +1,31 @@
+.labelName{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 50px;
+}
+
+.fieldTextbox{
+    display: flex;
+    margin:50px 50px;
+    justify-content:space-evenly;
+}
+
+.labelTag{
+    display: flex;
+    margin: 50px 244px;
+    justify-content: space-between;
+
+}
+
+.browseFile{
+    display: flex;
+    margin: 0px 123px;
+    justify-content: space-between;
+    width: 75%;
+
+}
+
+.tags{
+    height:50px;
+    width:32%;
+}
