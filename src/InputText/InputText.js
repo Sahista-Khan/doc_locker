@@ -5,7 +5,7 @@ import DomainImg from '../assets/Image/domain-icon.jpg'
 import OfferingImg from '../assets/Image/offering-icon.png'
 
 
-
+// Hi this is tesing
 function InputText() {
     return (
 
@@ -93,7 +93,6 @@ function InputText() {
                     <div className="imageLabel">
                         <img src={OfferingImg} alt="" className="image" />
                         <label>Open Tag</label>
-
                     </div>
                     <input className="inputText"
                         name="offering" type="text"
