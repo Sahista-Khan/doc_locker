@@ -45,23 +45,8 @@
     margin-right: 26%;
 }
 
-.preDefined_tag{
-    display:flex;
-    flex-direction: column;
-    flex:1;
-    max-width:522px;
-    align-items: center;
-    justify-content: space-between;
-    height:100px;
-}
 
-.imagePreTag{
-    margin: auto;
-    display: flex;
-    
-    align-items: center;
-    justify-content: space-around; 
-}
+
 .openTag{
     margin-top: 50px;
     display: flex;

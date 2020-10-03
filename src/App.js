@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="main_content">
-        <SideNav />
-        <Upload  />
+        <SideNav/>
+        <Upload />
       </div>
-      
+
     </div>
   );
 }

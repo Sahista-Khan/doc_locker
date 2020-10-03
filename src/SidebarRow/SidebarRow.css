@@ -1,0 +1,22 @@
+.sidebarRow_title{
+    font-size: 15px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarRow_title:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.sidebarRow_title p{
+    padding-left: 13px;
+}
+
+.sidebarRow_title:hover >p {
+    font-weight: 500;
+}
+.sidebarRow_title:hover > .iconImage{
+    color:#3399FF;
+
+}
