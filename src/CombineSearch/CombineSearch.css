@@ -1,0 +1,55 @@
+.main_search{
+    display: flex;
+}
+
+
+.uploadSubmit
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: -9px;
+    height: 126px;
+    margin-top: 24px;
+}
+
+.searchbutton
+{
+    width: 90px;
+    height: 35px;
+    background: white;
+    color: cadetblue;
+    border-radius: 7px;
+    border: 3px solid cadetblue;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.searchbutton:hover
+{
+    background: cadetblue;
+    color: white;
+}
+.uploadbutton
+{
+    width: 90px;
+    height: 35px;
+    background: white;
+    color: cadetblue;
+    border-radius: 7px;
+    border: 3px solid cadetblue;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.uploadbutton:hover
+{
+    background: cadetblue;
+    color: white;
+}
+.dataTable{
+    margin-top:28px;
+}
+

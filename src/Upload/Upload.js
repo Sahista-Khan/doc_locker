@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import firebase from '../Firebase';
 import { storage } from '../Firebase';
 import './Upload.css';
-import InputText from '../InputText/InputText'
 import '../InputText/InputText.css';
-import BUImg from '../assets/Image/bu-icon.png'
-import DomainImg from '../assets/Image/domain-icon.jpg'
-import OfferingImg from '../assets/Image/offering-icon.png'
-import ServiceImg from '../assets/Image/Service.png'
 import OpentagImg from '../assets/Image/Opentag.png'
 import PredefinedImg from '../assets/Image/PredefinedTag.png'
 import BrowseFileImg from '../assets/Image/BrowseFile.jpg'
 import Predefined from '../Predefined/Predefined'
+import AllInputText from '../Component/AllInputText/AllInputText';
 
 
 
@@ -27,12 +23,13 @@ class Upload extends Component {
             opentag: "",
             files: null,
             allItems: [],
+            
         }
         this.db = firebase.firestore();
 
     }
 
-    updateInput = e => {
+    updateInput = (e) => {                  
         this.setState({
             [e.target.name]: e.target.value
         });
@@ -41,7 +38,7 @@ class Upload extends Component {
     handleChange = (files) => {
         this.setState({
             files: files
-        }, () => { console.log(files) })
+        })
     }
 
     addUser = e => {
@@ -105,11 +102,25 @@ class Upload extends Component {
                                         console.log(doc.docs[0].id)
                                         let documentId = doc.docs[0].id
                                         let allFile = doc.docs[0].data().file
+                                        console.log("Modified By Data")
+                                        console.log(doc.docs[0].data().file)
+
+
                                         let filteredFile = allFile.filter((item) => {
-                                            return item.name !== file.name
+                                        
+                                            return item.name !== file.name 
+                                            
                                         })
 
-                                        filteredFile.push({ name: file.name, url })
+                                        filteredFile.unshift({
+                                             name: file.name, 
+                                             url ,   
+                                             createdDate: new Date().toString(),
+                                             createBy: 'sahistakhan',
+                                             modifiedDate: new Date().toString(),
+                                             modifiedBy: 'sahistakhan'
+                                            
+                                            })
 
 
 
@@ -140,7 +151,11 @@ class Upload extends Component {
                                             predefinedtag: this.state.predefinedtag,
                                             file: [{
                                                 name: file.name,
-                                                url
+                                                url,
+                                                createdDate: new Date().toString(),
+                                                createBy: 'sahistakhan',
+                                                modifiedDate: new Date().toString(),
+                                                modifiedBy: 'sahistakhan'
                                             }]
 
                                         })
@@ -170,24 +185,23 @@ class Upload extends Component {
         return this.items;
     }
 
+    componentDidMount() {
+        this.getAllUsers()
+    }
+
     render() {
         console.log("Render-->" + this.state.count)
         return (
             <>
                 <form className="main_Upload" onSubmit={this.addUser} >
-                    <div className="main_Row">
-                        <InputText label="BU" imgsrc={BUImg} inputChange={this.updateInput}
-                            valueText={this.state.bu} />
-                        <InputText label="Domain" imgsrc={DomainImg} inputChange={this.updateInput}
-                            valueText={this.state.domain} />
-                        <InputText label="Offering" imgsrc={OfferingImg} inputChange={this.updateInput}
-                            valueText={this.state.offering} />
-                        <InputText label="Service" imgsrc={ServiceImg} inputChange={this.updateInput}
-                            valueText={this.state.service} />
+                    <AllInputText inputChange={this.updateInput} 
+                            valueTextAll={{
+                                bu: this.state.bu,
+                                domain:this.state.domain,
+                                offering:this.state.offering,
+                                service:this.state.service
 
-
-                    </div>
-
+                            }}/>
                     <div class="main_second">
 
                         <Predefined label="Predefined Tag" imgsrc={PredefinedImg} inputChange={this.updateInput}
@@ -229,7 +243,8 @@ class Upload extends Component {
                                 <label>Open Tag</label>
                             </div>
                             <input className="inputText"
-                                name="opentag" type="text" onChange={this.updateInput}
+                                name="opentag" type="text" 
+                                onChange={this.updateInput}
                                 value={this.state.opentag}
                             />
 
@@ -255,9 +270,7 @@ class Upload extends Component {
             </>
         )
     }
-    componentDidMount() {
-        this.getAllUsers()
-    }
+   
 }
 
 export default Upload;

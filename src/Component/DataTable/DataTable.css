@@ -1,0 +1,8 @@
+/* .mdb-dataTable-head-head >tr th{
+    border-left:1px solid cadetblue
+}
+table.mdb-dataTable thead, table thead.mdb-dataTable-head {
+    cursor: pointer;
+    
+        border-left:1px solid cadetblue;
+} */

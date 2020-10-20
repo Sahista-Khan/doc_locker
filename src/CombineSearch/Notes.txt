@@ -1,0 +1,63 @@
+item1-------->file[data1,dta2,data3]
+item2-------->file[data1,dta2,data3]
+item3-------->file[data1,dta2,data3]
+
+ new = 22  temp=22 i=6
+
+ 23
+ 
+allOnloadArray = [1 2 6 9 10 13 15 16 20 ]
+for(let i=0;i<allOnloadArray.length;i++)
+{
+    if(new>allOnloadArray[i]){
+        temp=allOnloadArray[i]
+        allOnloadArray[i]=new
+        new=temp
+    }
+
+}
+
+allOnloadArray.push(ew)
+
+ .then(results => {
+                const allOnloadArray = []
+                results.docs.forEach(items => {
+                
+                    items.data().file.forEach(item=>{
+                         if (allOnloadArray.length<25)
+                    {
+                        allOnloadArray.push(item)
+
+                    }
+                    else{
+                        return false;
+                    }
+                   
+
+                    })
+                })
+                
+                setAllFileValue(allOnloadArray)
+
+
+            })
+
+
+
+a=1
+
+            asunc setState ({a:2}, ()=>{i am calback statedeend}) 
+clg(a)
+.
+.
+.
+.
+
+
+
+function setSate(obj, callback){
+
+    this.state.a=2;
+    callback()
+}
+

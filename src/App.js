@@ -1,18 +1,22 @@
 import React from 'react';
 import './App.css';
-import Upload from './Upload/Upload';
 import Header from './Header/Header';
-import SideNav from './SideNav/SideNav'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import HomeSearch from './HomeSearch/HomeSearch'
+import UploadMain from './Upload/UploadMain'
 
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div className="main_content">
-        <SideNav/>
-        <Upload />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/upload" component={UploadMain} />
+          <Route path="/" component={HomeSearch} />
+        </Switch>
+
+      </BrowserRouter>
 
     </div>
   );

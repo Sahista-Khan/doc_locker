@@ -1,0 +1,35 @@
+.main_display{
+    flex:0.15
+}
+.diplayTag{
+    height: 168px;
+    margin-left: 12px;
+    margin-top: 21px;
+}
+.diplayTag>span{
+    padding-left: 8px;
+    display: block;
+    border-left: 3px solid cadetblue;
+    font-size: 1.3em;
+}
+.recent_five{
+    padding-left: 18px;;
+}
+.recent_five ul{
+    list-style: none;
+}
+
+
+.recent_five  ul li{
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom:12px;
+}
+.recent_five>span{
+    display: block;
+    border-left: 3px solid red;
+    padding-left: 11px;   
+    margin-bottom: 7px;
+    color: red;
+    font-size: 1.3em;
+}
