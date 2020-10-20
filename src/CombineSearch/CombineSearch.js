@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import firebase from '../Firebase';
 import './CombineSearch.css'
 import AllInputText from '../Component/AllInputText/AllInputText'
-// import TableSearch from '../Component/Table/Table'
 import DataTable from '../Component/DataTable/DataTable'
 import { Link } from 'react-router-dom'
 
